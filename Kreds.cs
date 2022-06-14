@@ -10,6 +10,7 @@ namespace Badetidssystemet
         public string Navn;
         public string Adresse;
         public int AntalDeltagere = 0;
+        public bool ValidDeltagere;
 
         public Kreds(string iD, string navn, string adresse, int antalDeltagere)
         {
@@ -17,6 +18,18 @@ namespace Badetidssystemet
             Navn = navn;
             Adresse = adresse;
             AntalDeltagere = antalDeltagere;
+
+            #region Validering af AntalDeltagere
+
+            if (AntalDeltagere <= 0)
+            {
+                ValidDeltagere = false;
+            }
+            else
+            {
+                ValidDeltagere = true;
+            }
+            #endregion
         }
 
         public string _ID
@@ -28,7 +41,11 @@ namespace Badetidssystemet
 
         public override string ToString()
         {
-            return "\nID: " + ID + "\nNavn: " + Navn + "\nAdresse: " + Adresse + "\nAntal Deltagere: " + AntalDeltagere;
+            if (ValidDeltagere == true)
+            {
+                return "\nID: " + ID + "\nNavn: " + Navn + "\nAdresse: " + Adresse + "\nAntal Deltagere: " + AntalDeltagere;
+            }
+            return "Der er ikke nok Deltagere, der skal være mere end 0";
         }
 
 
