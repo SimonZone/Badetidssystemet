@@ -6,12 +6,12 @@ namespace Badetidssystemet
 {
     class BadetidsPeriode
     {
-        public string Type = "";
+        public string Type;
         public DayOfWeek UgeDag = new DayOfWeek();
         public DateTime StartTidspunkt = new DateTime();
         public DateTime SlutTidspunkt = new DateTime();
-        public string StartTidspunktString = "";
-        public string SlutTidspunktString = "";
+        public string StartTidspunktString;
+        public string SlutTidspunktString;
 
         Dictionary<string, Kreds> kredser;
 

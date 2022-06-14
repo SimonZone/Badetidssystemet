@@ -7,8 +7,8 @@ namespace Badetidssystemet
         static void Main(string[] args)
         {
             #region opgave 1:
-            Kreds kreds1 = new Kreds("1","Girls", "Vej, Nr, By, PostNr",12);
-            Kreds kreds2 = new Kreds("2","boys", "Vej, Nr, By, PostNr",7);
+            Kreds kreds1 = new Kreds("a","Girls", "Vej, Nr, By, PostNr",12);
+            Kreds kreds2 = new Kreds("b","boys", "Vej, Nr, By, PostNr",7);
 
             Console.WriteLine(kreds1.ToString());
             Console.WriteLine(kreds2.ToString());
@@ -39,8 +39,8 @@ namespace Badetidssystemet
 
             Console.WriteLine(badetidsPeriode.ToString());
 
-            badetidsPeriode2.DeleteKreds("0");
-            Console.WriteLine("deleted 1");
+            badetidsPeriode2.DeleteKreds("a");
+            Console.WriteLine("deleted a");
             Console.WriteLine(badetidsPeriode.ToString());
 
 
